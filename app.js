@@ -30,7 +30,9 @@ let automaticUpgrades = {
   }
 };
 
-function buyFans() {
+function getFans() {
+  let upgrade = document.getElementbyId("fans-upgrade");
+  let origcolor = upgrade.style.backgroundColor;
   if (music >= 75) {
   }
 }
