@@ -1,11 +1,11 @@
 let clickUpgrades = {
   fans: {
-    price: 25,
+    price: 5,
     quantity: 0,
     multiplier: 2
   },
   duet: {
-    price: 5,
+    price: 50,
     quantity: 0,
     multiplier: 5
   }
@@ -24,12 +24,6 @@ let automaticUpgrades = {
   }
 };
 
-let music = 0;
-function mine() {
-  music += 1;
-  document.getElementById("music").innerHTML = ` <h1> ${music} </h1>`;
-}
-
 function fanPrice() {
   document.getElementById("fan-price").innerHTML = `
 <h2> ${clickUpgrades.fans.price}</h2>`;
@@ -46,7 +40,7 @@ fanQuantity();
 
 function buyFans() {
   if (music >= clickUpgrades.fans.price) {
-    clickUpgrades.fans.quantity++;
+    clickUpgrades.fans.quantity += 1;
     clickUpgrades.fans.price += 5;
   }
 
@@ -72,7 +66,7 @@ duetPartners();
 
 function buyDuets() {
   if (music >= clickUpgrades.duet.price) {
-    clickUpgrades.duet.quantity++;
+    clickUpgrades.duet.quantity += 1;
     clickUpgrades.duet.price += 10;
   }
 
@@ -80,4 +74,19 @@ function buyDuets() {
   <h2> ${clickUpgrades.duet.price}</h2>`;
   document.getElementById("duet-partners").innerHTML = `
   <h2> ${clickUpgrades.duet.quantity}</h2>`;
+}
+
+let music = 0;
+function mine() {
+  music = music += 1;
+  document.getElementById("music").innerHTML = ` <h1> ${music} </h1>`;
+}
+
+const x = document.getElementById("fan-button");
+
+x.addEventListener("click", fanMultipler);
+
+function fanMultipler() {
+  music += clickUpgrades.fans.quantity * clickUpgrades.fans.multiplier;
+  document.getElementById("music").innerHTML = ` <h1> ${music} </h1>`;
 }
