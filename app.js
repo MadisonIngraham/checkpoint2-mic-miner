@@ -5,7 +5,7 @@ let clickUpgrades = {
     multiplier: 2
   },
   duet: {
-    price: 150,
+    price: 5,
     quantity: 0,
     multiplier: 5
   }
@@ -42,6 +42,8 @@ function fanQuantity() {
   <h2> ${clickUpgrades.fans.quantity}</h2>`;
 }
 
+fanQuantity();
+
 function buyFans() {
   if (music >= clickUpgrades.fans.price) {
     clickUpgrades.fans.quantity++;
@@ -52,4 +54,30 @@ function buyFans() {
   <h2> ${clickUpgrades.fans.price}</h2>`;
   document.getElementById("fan-quantity").innerHTML = `
   <h2> ${clickUpgrades.fans.quantity}</h2>`;
+}
+
+function duetPrice() {
+  document.getElementById("duet-price").innerHTML = `
+<h2> ${clickUpgrades.duet.price}</h2>`;
+}
+
+duetPrice();
+
+function duetPartners() {
+  document.getElementById("duet-partners").innerHTML = `
+  <h2> ${clickUpgrades.duet.quantity}</h2>`;
+}
+
+duetPartners();
+
+function buyDuets() {
+  if (music >= clickUpgrades.duet.price) {
+    clickUpgrades.duet.quantity++;
+    clickUpgrades.duet.price += 10;
+  }
+
+  document.getElementById("duet-price").innerHTML = `
+  <h2> ${clickUpgrades.duet.price}</h2>`;
+  document.getElementById("duet-partners").innerHTML = `
+  <h2> ${clickUpgrades.duet.quantity}</h2>`;
 }
