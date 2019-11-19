@@ -19,7 +19,7 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-12 text-center p-3"><h1>Mic Miner!</h1></div>
+        <div class="col-12 text-center p-3"><h1>Music Miner!</h1></div>
       </div>
       <div class="row">
         <div class="col-5 text-center">
@@ -32,14 +32,46 @@
         <div class="col-1" id="music"></div>
       </div>
       <div class="row d-flex justify-content-center">
-        <div class="col-2 text-center">
-          <button type="button" class="btn btn-primary glow" id="fans-upgrade">
+        <div class="col-3 text-center">
+          <button type="button" class="btn btn-primary" onclick="buyFans()">
             Upgrade 1: Fans!
           </button>
         </div>
-        <div class="col-2 text-center">Upgrade 2: Duet Partner!</div>
-        <div class="col-2 text-center">Upgrade 3: Silver Mic!</div>
-        <div class="col-2 text-center">Upgrade 4: Gold Mic!</div>
+        <div class="col-3 text-center">
+          <button type="button" class="btn btn-primary">
+            Upgrade 2: Duet!
+          </button>
+        </div>
+        <div class="col-3 text-center">
+          <button type="button" class="btn btn-primary">
+            Upgrade 3: Gold Mic!
+          </button>
+        </div>
+        <div class="col-3 text-center">
+          <button type="button" class="btn btn-primary">
+            Upgrade 4: Lady Gaga!
+          </button>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-1 text-center">Price:</div>
+        <div class="col-1 text-center">Quantity:</div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-1 text-center" id="fan-price"></div>
+        <div class="col-1 text-center" id="fan-quantity"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
+        <div class="col-1 text-center"></div>
       </div>
     </div>
   </body>
